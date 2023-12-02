@@ -1,0 +1,14 @@
+* Arreglar el código de ObstaclePool. (object pooling) 
+- Al activarse un objeto, su vector posición debe apuntar hacia la ubicación del jugador.
+
+
+
+ * En el método de generar asteroides, se debe implementar un método que ubique a los objetos aleatoriamente sin colisionar. 
+
+
+Dividir el juego por fases
+Por cada fase o nivel habra un tiempo limite
+Al avanzar al siguiente nivel se tomara en cuenta los puntos obtenidos en el nivel anterior y segun ellos podras equipar objetos que te puedan ayudar a terminar ese nivel que ha aumentado de dificultad. 
+Por cada nivel, habra nuevos objetos.
+El objetivo sera llegar a tu planeta y desbloquear nuevos planetas
+// Agregar un sistema de monedas que se recojan aleatoriamente al destruir un objeto dependiendo de su dficultad te puede dar más, la otra forma de obtener monedas es con combos
