@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
 
         //rb.AddForce(new Vector3(direction.x, 0, direction.y) * Time.deltaTime*speed);
-        Debug.Log(direction);
+       // Debug.Log(direction);
         
         if (ismoving)
         {
@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
             rb.AddRelativeForce(Vector3.forward *Time.deltaTime* speed);
             rb.rotation = Quaternion.Euler(0, angle, 0);
         }
+    
 
         //transform.rotation = Quaternion.Euler(0, angle, 0);
 

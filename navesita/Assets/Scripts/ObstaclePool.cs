@@ -7,6 +7,7 @@ public class ObstaclePool : MonoBehaviour
     [SerializeField] private GameObject ObstaclePrefab;
     [SerializeField] private int poolSize = 5;
     [SerializeField] private List<GameObject> ObstacleList;
+    public GameObject player;
     private static ObstaclePool instance;
     public static ObstaclePool Instance { get { return instance; } }
     private void Awake()
@@ -43,6 +44,7 @@ public class ObstaclePool : MonoBehaviour
             if (!ObstacleList[i].activeSelf)
             {
                 ObstacleList[i].SetActive(true);
+                
                 return ObstacleList[i];
             }
         }

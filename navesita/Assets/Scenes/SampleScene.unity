@@ -757,6 +757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5832e99cb0d80143aa8baa5f09cf658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 695689459}
+  speed: 2
 --- !u!4 &584312449
 Transform:
   m_ObjectHideFlags: 0
@@ -1486,6 +1488,7 @@ MonoBehaviour:
   ObstaclePrefab: {fileID: 4359458025936046507, guid: edadddb34d0894647884e2d190a260b7, type: 3}
   poolSize: 5
   ObstacleList: []
+  player: {fileID: 695689459}
 --- !u!4 &1985490530
 Transform:
   m_ObjectHideFlags: 0
