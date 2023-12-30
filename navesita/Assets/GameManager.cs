@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     
     public TMP_Text txtpuntaje;
     public TMP_Text txtvidas;  
-    
+     
     public int puntaje;
     public int vidas = 5;
     
