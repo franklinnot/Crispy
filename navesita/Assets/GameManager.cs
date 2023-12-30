@@ -68,7 +68,17 @@ public class GameManager : MonoBehaviour
         {
             rbNave.AddRelativeForce(Vector3.forward * Time.deltaTime * speed);
             rbNave.rotation = Quaternion.Euler(0, angle, 0);
-        }  
+        }
+
+        float worldHeight = Camera.main.orthographicSize * 2.0f;
+        float worldWidth = worldHeight * Camera.main.aspect;
+
+        if ((rbNave.transform.position.x >= (worldWidth/2) || rbNave.transform.position.z >= (worldHeight / 2))
+            || ((rbNave.transform.position.x <= -(worldWidth / 2) || rbNave.transform.position.z <= -(worldHeight / 2))))
+        {
+            rbNave.gameObject.SetActive(false);
+            
+        }
     }
 
     public void FixedUpdate()
