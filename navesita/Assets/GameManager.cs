@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     //public float limiteZ = 2;
 
     private bool ismoving;
-
+    public GameObject obstaclepool;
 
     // Start is called before the first frame update
     private void Start()
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             || ((rbNave.transform.position.x <= -(worldWidth / 2) || rbNave.transform.position.z <= -(worldHeight / 2))))
         {
             rbNave.gameObject.SetActive(false);
-            
+            obstaclepool.gameObject.SetActive(false);
         }
     }
 

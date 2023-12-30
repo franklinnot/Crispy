@@ -1894,6 +1894,10 @@ PrefabInstance:
       propertyPath: txtpuntaje
       value: 
       objectReference: {fileID: 175291715}
+    - target: {fileID: 5511776657376271012, guid: d9ffbdebfce80a9498e0d892747c22a9, type: 3}
+      propertyPath: obstaclepool
+      value: 
+      objectReference: {fileID: 1985490528}
     - target: {fileID: 6694277629295774419, guid: d9ffbdebfce80a9498e0d892747c22a9, type: 3}
       propertyPath: m_Name
       value: Player
