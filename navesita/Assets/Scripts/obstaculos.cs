@@ -12,33 +12,27 @@ public class obstaculos : MonoBehaviour
 
     private void Awake()
     {
-       // rb.AddRelativeForce(Vector3.forward * Time.deltaTime * speed);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
         rb=GetComponent<Rigidbody>();
     }
     private void OnEnable()
     {
-     
-        //Debug.Log("ENABLE");
-        //rb.transform.LookAt(player.transform);
-         
+        
     }
+
     private void OnDisable()
     {
       
     }
+
     // Update is called once per frame
     void Update()
     {
-
-        
-     
-
         if (transform.position.x > 15)
         {
             gameObject.SetActive(false);
@@ -47,8 +41,6 @@ public class obstaculos : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-
-
         if (transform.position.z > 7)
         {
             gameObject.SetActive(false);
@@ -58,6 +50,7 @@ public class obstaculos : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {

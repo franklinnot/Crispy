@@ -9,7 +9,9 @@ public class ObstaclePool : MonoBehaviour
     [SerializeField] private List<GameObject> ObstacleList;
     public GameObject player;
     private static ObstaclePool instance;
+
     public static ObstaclePool Instance { get { return instance; } }
+
     private void Awake()
     {
         if (instance == null)
@@ -22,10 +24,14 @@ public class ObstaclePool : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
     void Start()
     {
         AddObstaclesToPool(poolSize);
     }
+
+
     private void AddObstaclesToPool(int amount)
     {
         for (int i = 1; i < amount; i++)
@@ -37,6 +43,8 @@ public class ObstaclePool : MonoBehaviour
 
         }
     }
+
+
     public GameObject RequestObstacle()
     {
         for(int i = 0; i < ObstacleList.Count; i++)
@@ -49,8 +57,5 @@ public class ObstaclePool : MonoBehaviour
             }
         }
         return null;
-    }
-
-   
-  
+    } 
 }

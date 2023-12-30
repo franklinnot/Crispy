@@ -10,19 +10,23 @@ public class CrearObstaculos : MonoBehaviour
     public float speed=2;
 
     public static Vector3[] a;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        // generaAsteroides();
         InvokeRepeating("generaAsteroides", 0.5f, 2f);
         InvokeRepeating("aumentodificultad", 5, 5);
     }
+
 
     // Update is called once per frame
     void Update()
     {
         
     }
+
+
     void generaAsteroides()
     {
         a = new Vector3[4];
@@ -35,23 +39,18 @@ public class CrearObstaculos : MonoBehaviour
         a[2] = randomSpawn2;
         a[3] = randomSpawn3;
         
-     //   int indice = Random.Range(0, o.Length);
         int indice1 = Random.Range(0, a.Length);
         float rangoX = Random.Range(-LimiteX, LimiteX);
         float rangoZ = Random.Range(-LimiteZ, LimiteZ);
         
         Vector3 posicionAsteroides1 = new Vector3(rangoZ, 0, -LimiteZ);
-        // Instantiate(asteroides[indice], a[indice1], asteroides[indice].transform.rotation);
         GameObject obstacle = ObstaclePool.Instance.RequestObstacle();
-        //obstacle.transform.SetPositionAndRotation(a[indice1], transform.rotation);
-        obstacle.transform.position=a[indice1];
-      
+        obstacle.transform.position = a[indice1];
         obstacle.transform.LookAt(player.transform);
         obstacle.GetComponent<Rigidbody>().velocity=(obstacle.transform.forward * speed);
-
-        //obstacle.transform.rotation=
-
     }
+
+
     void aumentodificultad()
     {
         if (speed < 10)

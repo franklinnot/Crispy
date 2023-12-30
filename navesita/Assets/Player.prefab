@@ -47,11 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30beb92cd17e9554894b578c128fb458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   bala: {fileID: 7869234312494076082, guid: 835e0f9ea5fe2514ea04587dc22a642d, type: 3}
-  limiteX: 11
-  limiteZ: 18
-  prefab: {fileID: 0}
+  txtpuntaje: {fileID: 0}
+  txtvidas: {fileID: 0}
+  puntaje: 0
+  vidas: 3
+  speed: 2
 --- !u!54 &5344918649339611994
 Rigidbody:
   m_ObjectHideFlags: 0
